@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.ckeditor.com/4.10.1/standard/ckeditor.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+     <!--font awesome-->
+   <script defer src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" integrity="sha384-ZbbbT1gw3joYkKRqh0kWyRp32UAvdqkpbLedQJSlnI8iLQcFVxaGyrOgOJiDQTTR" crossorigin="anonymous"></script>
+     <!--Import Google Icon Font-->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+  <!-- Header -->
+    <header>
+        <nav class="blue ">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="index.html" class="brand-logo">MYadmin</a>
+                    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                      <li><a href="/index.html">Dashboard</a></li>
+                      <li><a href="page1.html">Posts</a></li>
+                      <li><a href="page2.html">Categories</a></li>
+                      <li><a href="page3.html">Comments</a></li>
+                      <li><a href="page4.html">Users</a></li>
+                      <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
+                    </ul>
+                  </div>
+            </div>
+          </nav>
+
+          <ul id="slide-out" class="sidenav">
+            <li>
+                <div class="user-view">
+              <div class="background">
+                <img src="amp.jpg">
+              </div>
+              <a href="#user"><img class="circle" src="mad copie.jpg"></a>
+              <a href="#name"><span class="white-text name">Hama</span></a>
+              <a href="#email"><span class="white-text email">issoufou.mamadou@yahoo.com</span></a>
+            </div>
+        </li>
+        <li><a href="/index.html"><i class="material-icons">view_quilt</i>Dashboard</a></li>
+        <li><a href="page1.html">Posts</a></li>
+           <li><a href="page2.html">Categories</a></li>
+            <li><a href="page3.html">Comments</a></li>
+            <li><a href="page4.html">Users</a></li>
+            <li>
+              <div class="divider"></div>
+            </li>
+            <li><a class="subheader">Account controls</a></li>
+            <li><a class="waves-effect" href="#!">Logout</a></li>
+          </ul>
+    </header>
+<!-- cards -->
+    <section class="section">
+        <div class="row center">
+            <div class="col s12 m3">
+                <div class="card-panel small" style="padding: 5px;">
+                    <i class="material-icons medium">tag_faces</i>
+                    <h4>Monthly Visitors</h4>
+                    <p>35900</p>
+                    <div class="progress">
+                        <div class="determinate" style="width: 30%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m3">
+                <div class="card-panel small" style="padding: 5px;">
+                    <i class="material-icons medium">mode_edit</i>
+                    <h4>Monthly Visitors</h4>
+                    <p>35900</p>
+                    <div class="progress">
+                        <div class="determinate" style="width: 20%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m3">
+                <div class="card-panel small" style="padding: 5px;">
+                    <i class="material-icons medium">mode_comment</i>
+                    <h4>Monthly Visitors</h4>
+                    <p>35900</p>
+                    <div class="progress">
+                        <div class="determinate" style="width: 40%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m3">
+                <div class="card-panel small" style="padding: 5px;">
+                    <i class="fa fa-users fa-4x"></i>
+                    <h4>Monthly Visitors</h4>
+                    <p>35900</p>
+                    <div class="progress">
+                        <div class="determinate" style="width: 10%"></div>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <!--boite du diagramme-->
+        <div class="row blue lighten-4">
+            <div class="col s12 m8">
+                 <div class="card center blue-text">
+                     <h4>Daily Visitors</h4>
+                     <div class="card">
+                        <canvas id="myChart" width="500" height="163"></canvas>
+                         
+                     </div>
+                 </div>
+                
+             </div>
+
+             <div class="col s12 m4">
+                 <div class="card">
+                     <h3>Latest Comments</h3>
+                     <div class="">
+                        <ul class="collection">
+                            <li class="collection-item avatar">
+                              <img src="Martin..jpg" alt="" class="circle">
+                              <span class="title">Martin</span>
+                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt magni ipsa, repellendus perspiciatis consequatur possimus necessitatibus numquam iusto cum a.<br> </p>
+                              <p><span class="green-text">Approve:</span><span class="red-text">Deny</span></p>
+                            </li>
+
+                            <li class="collection-item avatar">
+                                <img src="Martin..jpg" alt="" class="circle">
+                                <span class="title">Tanko</span>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt magni ipsa, repellendus perspiciatis consequatur possimus necessitatibus numquam iusto cum a.<br> </p>
+                                <p><span class="green-text">Approve:</span><span class="red-text">Deny</span></p>
+                              </li>
+
+                              <li class="collection-item avatar">
+                                <img src="Martin..jpg" alt="" class="circle">
+                                <span class="title">Tanko</span>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt magni ipsa, repellendus perspiciatis consequatur possimus necessitatibus numquam iusto cum a.<br> </p>
+                                <p><span class="green-text">Approve:</span><span class="red-text">Deny</span></p>
+                              </li>  
+                     </div>
+                 </div> 
+             </div>
+            </div>
+        </div>          
+</section>
+<!-- table -->
+<section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col s12 m8">
+                <table class="striped">
+                    <thead>
+
+                      <tr>
+                          <th>Title</th>
+                          <th>Categories</th> 
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr>
+                        <td>Alvin</td>
+                        <td>Eclair</td>
+                        <td><a href="#" class="btn btn-secondary"> >>Details</a></td>
+                      </tr>
+                      <tr>
+                        <td>Alan</td>
+                        <td>Jellybean</td>
+                        <td><a href="#" class="btn btn-secondary"> >>Details</a></td>
+                      </tr>
+                      <tr>
+                        <td>Jonathan</td>
+                        <td>Lollipop</td>
+                        <td><a href="#" class="btn btn-secondary"> >>Details</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="card-title">
+                    <h5>Quick Todos</h5>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="todo" type="text" class="validate">
+                        <label for="todo">Add Todo...</label>
+                    </div>
+                    <ul class="collection">
+                        <div class="">
+                            <li class="collection-item">
+                                <span class="title">Todo One</span>
+                                <span><i class="fa fa-times closeEnd green-text right" aria-hidden="true"></i>
+                                </span>
+                            </li>
+                    
+                            <li class="collection-item">
+                                <span class="title">Todo Two</span>
+                                <span><i class="fa fa-times closeEnd green-text right" aria-hidden="true"></i>
+                                </span>
+                            </li>
+                            <li class="collection-item">
+                                <span class="title">Todo Three</span>
+                                <span><i class="fa fa-times closeEnd green-text right" aria-hidden="true"></i>
+                                </span>
+                            </li>
+                        </div>
+                    </ul>
+                </div>               
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+ <!-- Modal partie -->
+        <!--modal 1-->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+              <h4>Add post</h4>
+              
+                  <div class="row">
+                     <div class="col s12">
+                        <div class="input-field col s12">
+                            <input placeholder="title" id="first_name" type="text" class="validate">
+                          </div>
+                          <div class="input-field col s12">
+                            <select>
+                                <option value="" disabled selected>Select Option</option>
+                                <option value="1">Web developer</option>
+                                <option value="2">Students</option>
+                                <option value="3">Professional</option>
+                            </select>
+                            <label>Categry</label>
+                        </div>
+                     </div> 
+                     <textarea name="text_editor"></textarea>
+                  </div>
+            
+            </div>  
+            <div class="modal-footer">
+                <a href="#!" class="modal-close btn waves-effect waves-green blue lighten-2 white-text">SUBMIT</a>
+            </div>
+          </div>
+       
+      <!--modal 2-->
+      <div id="modal2" class="modal container">
+        <div class="modal-content black-text">
+            <h4 class="blue-text">Add Category</h4>
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input type="text" id="textarea1">
+                            <label for="textarea1">Title</label>
+                        </div>
+                        <a href="#!" class="modal-close btn waves-effect waves-green blue lighten-2 white-text right">SUBMIT</a>
+                    </div>   
+                </form>
+        </div>
+    </div>
+     
+      <!--modal 3-->
+      <div id="modal3" class="modal">
+        <div class="modal-content">
+            <h4 class="blue-text">Add User</h4>
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" id="name1">
+                        <label for="name1">Name</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input type="email" id="email1">
+                        <label for="email1">Email</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input type="password" id="password1">
+                        <label for="password1">Password</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input type="password" id="pass2">
+                        <label for="pass2">Confirm Password</label>
+                    </div>
+                    <a href="#!"
+                        class="modal-close btn waves-effect waves-green blue lighten-2 white-text right">SUBMIT</a>
+                </div>
+            </form>
+        </div>
+      </div>
+      
+    
+      <!--footer-->
+      <footer class="page-footer blue white-text center">
+        <p>MyAdmin Codeloccol © 2020</p>
+        <div class="fixed-action-btn">
+            <a class="btn-floating btn-large red">
+              <i class="large material-icons">mode_edit</i>
+            </a>
+            <ul>
+              <li><a class="btn-floating blue  btn modal-trigger" href="#modal1"><i class="material-icons">mode_edit</i></a></li>
+              <li><a class="btn-floating blue  btn modal-trigger" href="#modal2"><i class="material-icons">folder</i></a></li>
+              <li><a class="btn-floating blue  btn modal-trigger" href="#modal3"><i class="fa fa-users"></i></a></li>
+            </ul>
+          </div>          
+      </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- script.Js and Jquery -->
+
+      <script>
+        CKEDITOR.replace( 'text_editor' );
+    </script>
+
+   <script>
+        $(document).ready(function(){
+        $('.sidenav').sidenav();
+        $('.fixed-action-btn').floatingActionButton();
+        $('.modal').modal();
+        $('select').formSelect();
+        
+      });
+
+       
+   </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const labels = [
+          'January',
+          'February',
+          'March',
+          'April',
+          'May',
+          'June',
+        ];
+      
+        const data = {
+          labels: labels,
+          datasets: [{
+            label: 'Daily visitors',
+            backgroundColor: '#ffffff',
+            borderColor: '#263238 ',
+            data: [0, 10, 5, 2, 20, 30, 45],
+          }]
+        };
+      
+        const config = {
+          type: 'line',
+          data: data,
+          options: {}
+        };
+      </script>
+
+      <script>
+        const myChart = new Chart(
+          document.getElementById('myChart'),
+          config
+        );
+      </script>
+</body>
+</html>
